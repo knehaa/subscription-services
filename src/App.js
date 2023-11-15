@@ -5,7 +5,7 @@ import Navbar from './components/NavBar/Navbar'
 import Plans from './pages/Plans'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
-import Login from './pages/Login'
+import LoginSignup from './pages/LoginSignup'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path='ProductId' element={<Product/>}/>
         </Route>
          <Route path='./Cart' element={<Cart/>}/> 
-         <Route path='./Login' element={<Login/>}/> 
+         <Route path='./Login' element={<LoginSignup/>}/> 
       </Routes>
       </BrowserRouter>
     </div>
