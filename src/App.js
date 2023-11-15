@@ -12,7 +12,7 @@ function App() {
   // const [selectMonthly, setSelectMonthly] = useState(true);
   // console.log(selectMonthly);
   return (
-    <><div>
+    <div>
       <BrowserRouter>
       <Navbar />
       <Routes>
@@ -24,9 +24,8 @@ function App() {
          <Route path='./Login' element={<Login/>}/> 
       </Routes>
       </BrowserRouter>
-      
     </div>
-    
+  );
     <div className="PricingApp">
         <div className="app-container">
           {/* Cards here */}
@@ -52,8 +51,8 @@ function App() {
         </div>
       </div>
 
-      </>
-  );
+      
+  
 }
 
 export default App;

@@ -37,4 +37,4 @@ let data_product = [
         image: p6_img
     },
 ]
-export default data_product
+export default data_product;

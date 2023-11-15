@@ -1,10 +1,11 @@
 import React from 'react'
-import services from '../components/services/services'
+import Resources from '../components/Resources/Resources'
+import Navbar from '../components/NavBar/Navbar'
 
 const Plans = () => {
   return (
     <div>
-      <services/>
+      <Resources />
     </div>
   )
 }
