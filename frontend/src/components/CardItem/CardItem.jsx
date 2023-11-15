@@ -1,9 +1,9 @@
 import React from 'react'
-import './Item.css'
+import './CardItem.css'
 
-const Item = (props) => {
+const CardItem = (props) => {
   return (
-    <div classname='Item'>
+    <div classname='CardItem'>
       <img src={props.image} alt=" "/>
       <p>{props.name}</p>
       {/* <div classname="Item-prices">
@@ -14,4 +14,4 @@ const Item = (props) => {
   )
 }
 
-export default Item
+export default CardItem

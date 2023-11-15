@@ -1,7 +1,7 @@
-.Item{
+.CardItem{
     width: 350px;
 }
-.Item p{
+.CardItem p{
     margin: 6px 0px;
 }
 .Item-prices{

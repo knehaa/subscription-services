@@ -1,6 +1,7 @@
 import React from 'react'
 import './Resources.css'
 import data_product from '../assets/data'
+import CardItem from '../CardItem/CardItem'
 
 const resources = () => {
   return (
@@ -9,7 +10,7 @@ const resources = () => {
         <hr />
         <div classname="services">
             {data_product.map((Item, i)=>{
-                return <item key={i} id={Item.id} name={Item.name} image={Item.image} />
+                return <CardItem key={i} id={Item.id} name={Item.name} image={Item.image} />
             })}
         </div>
 
@@ -17,4 +18,5 @@ const resources = () => {
   )
 }
  export default resources
+
 
