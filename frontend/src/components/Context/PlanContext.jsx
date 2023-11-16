@@ -1,26 +1,37 @@
 import React, {createContext, useState} from 'react'
-import data_product from "../assets/data/data_product"
+import data_product from '../assets/data';
 
 export const PlanContext = createContext(null);
 
 const getDefaultCart = ()=>{
     let cart = {};
-    for (let index = 0; index < product_data.length; index++) {
+    for (let index = 0; index < data_product.length+1; index++) {
         cart[index] = 0;
     }
     return cart;
 }
 
-const PlanContext = (props) => {
+const PlanContextProvider = (props) => {
 
-    const [cartItem, setCartItems] = useState(getDefaultCart());
-    const contextValue = {product_data, cartItem, };
+    const [cartItems, setCartItems] = useState(getDefaultCart());
 
-    console.log(cartItem);
+    console.log(cartItems);
+
+    const addToCart = (itemId) => {
+      setCartItems((prev)=>({...prev, [itemId]:prev[itemId]+1}))
+    }
+
+    const removeFromCart = (itemId) => {
+      setCartItems((prev)=>({...prev, [itemId]:prev[itemId]-1}))
+    }
    
-
+  const contextValue = {data_product, cartItems, addToCart, removeFromCart };
   return (
-    <div>PlanContext</div>
+    <PlanContext.Provider value={contextValue}>
+      {props.children}
+    </PlanContext.Provider>
   )
 }
+
+export default PlanContextProvider;
 

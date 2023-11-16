@@ -3,7 +3,7 @@ import './CardItem.css'
 
 const CardItem = (props) => {
   return (
-    <div classname='CardItem'>
+    <div className='CardItem'>
       <img src={props.image} alt=" "/>
       <p>{props.name}</p>
       {/* <div classname="Item-prices">
